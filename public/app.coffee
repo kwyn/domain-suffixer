@@ -13,26 +13,20 @@ angular.module "suffixer", ['ngRoute']
     $scope.results
     $scope.search = (idea)->
       $scope.results = findIt $scope.idea
-    
-checkIfDomain = (suffix) ->
-  result = null
-  index = domain.indexOf('.'+suffix)
-  if index > -1
-    result = domain[index]
-  result
-
+      
 findIt = (word) ->
   wordArray = word.split ''
   suffixes = wordArray[-4..]
   while suffixes.length > 1
-    if checkIfDomain suffixes.join('')
-      results = wordArray[0..-(suffixes.length+1)].join('') + '.' + suffixes.join('')
+    suffix = suffixes.join('')
+    if domainObject[suffix]
+      results = wordArray[0..-(suffixes.length+1)].join('') + domainObject[suffixes.join('')]
       suffixes.shift()
     else
       suffixes.shift()
   results
 
-domain = [".aero",".biz",".cat",".com",".coop",".edu",".gov",".info",".int",".jobs",".mil",".mobi",".museum",
+domainArray = [".aero",".biz",".cat",".com",".coop",".edu",".gov",".info",".int",".jobs",".mil",".mobi",".museum",
 ".name",".net",".org",".travel",".ac",".ad",".ae",".af",".ag",".ai",".al",".am",".an",".ao",".aq",".ar",".as",".at",".au",".aw",
 ".az",".ba",".bb",".bd",".be",".bf",".bg",".bh",".bi",".bj",".bm",".bn",".bo",".br",".bs",".bt",".bv",".bw",".by",".bz",".ca",
 ".cc",".cd",".cf",".cg",".ch",".ci",".ck",".cl",".cm",".cn",".co",".cr",".cs",".cu",".cv",".cx",".cy",".cz",".de",".dj",".dk",".dm",
@@ -46,4 +40,6 @@ domain = [".aero",".biz",".cat",".com",".coop",".edu",".gov",".info",".int",".jo
 ".tg",".th",".tj",".tk",".tm",".tn",".to",".tp",".tr",".tt",".tv",".tw",".tz",".ua",".ug",".uk",".um",".us",".uy",".uz", ".va",".vc",
 ".ve",".vg",".vi",".vn",".vu",".wf",".ws",".ye",".yt",".yu",".za",".zm",".zr",".zw"]
 
+domainObject = {}
 
+domainObject[value.substring(1)] = value for value in domainArray
