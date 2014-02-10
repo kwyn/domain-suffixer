@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.22/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'firebase' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'firebase', null ]
+6 verbose cache add name=undefined spec="firebase" args=["firebase",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'firebase',
+7 verbose parsed url   path: 'firebase',
+7 verbose parsed url   href: 'firebase' }
+8 silly lockFile 92f5e8df-firebase firebase
+9 verbose lock firebase /Users/kwyn/.npm/92f5e8df-firebase.lock
+10 silly lockFile 92f5e8df-firebase firebase
+11 silly lockFile 92f5e8df-firebase firebase
+12 verbose addNamed [ 'firebase', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 2bddc103-firebase firebase@
+15 verbose lock firebase@ /Users/kwyn/.npm/2bddc103-firebase.lock
+16 silly addNameRange { name: 'firebase', range: '*', hasData: false }
+17 verbose url raw firebase
+18 verbose url resolving [ 'https://registry.npmjs.org/', './firebase' ]
+19 verbose url resolved https://registry.npmjs.org/firebase
+20 info trying registry request attempt 1 at 23:07:08
+21 verbose etag "A6QFLVYBKMY6WUNURODXDHOS7"
+22 http GET https://registry.npmjs.org/firebase
+23 http 304 https://registry.npmjs.org/firebase
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Mon, 10 Feb 2014 07:07:09 GMT',
+24 silly registry.get     server: 'Apache',
+24 silly registry.get     connection: 'Keep-Alive',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     etag: '"A6QFLVYBKMY6WUNURODXDHOS7"',
+24 silly registry.get     'cache-control': 'max-age=1',
+24 silly registry.get     vary: 'Accept' } ]
+25 verbose etag firebase from cache
+26 silly addNameRange number 2 { name: 'firebase', range: '*', hasData: true }
+27 silly addNameRange versions [ 'firebase',
+27 silly addNameRange   [ '0.0.0',
+27 silly addNameRange     '0.5.0',
+27 silly addNameRange     '0.5.1',
+27 silly addNameRange     '0.5.2',
+27 silly addNameRange     '0.5.3',
+27 silly addNameRange     '0.5.4',
+27 silly addNameRange     '0.6.0',
+27 silly addNameRange     '0.6.1',
+27 silly addNameRange     '0.6.2',
+27 silly addNameRange     '0.6.3',
+27 silly addNameRange     '0.6.4',
+27 silly addNameRange     '0.6.5',
+27 silly addNameRange     '0.6.6',
+27 silly addNameRange     '0.6.7',
+27 silly addNameRange     '0.6.8',
+27 silly addNameRange     '0.6.9',
+27 silly addNameRange     '0.6.10',
+27 silly addNameRange     '0.6.11',
+27 silly addNameRange     '0.6.14',
+27 silly addNameRange     '0.6.15',
+27 silly addNameRange     '0.6.16',
+27 silly addNameRange     '0.6.17',
+27 silly addNameRange     '0.6.19',
+27 silly addNameRange     '0.6.21',
+27 silly addNameRange     '0.6.22',
+27 silly addNameRange     '1.0.1',
+27 silly addNameRange     '1.0.1-npm',
+27 silly addNameRange     '1.0.2',
+27 silly addNameRange     '1.0.3',
+27 silly addNameRange     '1.0.4' ] ]
+28 verbose addNamed [ 'firebase', '1.0.4' ]
+29 verbose addNamed [ '1.0.4', '1.0.4' ]
+30 silly lockFile e4bfd8fe-firebase-1-0-4 firebase@1.0.4
+31 verbose lock firebase@1.0.4 /Users/kwyn/.npm/e4bfd8fe-firebase-1-0-4.lock
+32 silly lockFile a0ad0291--org-firebase-firebase-1-0-4-tgz https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz
+33 verbose lock https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz /Users/kwyn/.npm/a0ad0291--org-firebase-firebase-1-0-4-tgz.lock
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz',
+34 verbose addRemoteTarball   '0937b9760a9bc6859adc04bc56ab9c8d3ca11114' ]
+35 info retry fetch attempt 1 at 23:07:09
+36 verbose fetch to= /var/folders/gb/_x5p8h2s1_7gzt1mvcdvgpvw0000gn/T/npm-8684-CcasWvqZ/1392016029807-0.1931824057828635/tmp.tgz
+37 http GET https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz
+38 http 200 https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz
+39 silly lockFile a0ad0291--org-firebase-firebase-1-0-4-tgz https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz
+40 silly lockFile a0ad0291--org-firebase-firebase-1-0-4-tgz https://registry.npmjs.org/firebase/-/firebase-1.0.4.tgz
+41 silly lockFile e4bfd8fe-firebase-1-0-4 firebase@1.0.4
+42 silly lockFile e4bfd8fe-firebase-1-0-4 firebase@1.0.4
+43 silly lockFile 2bddc103-firebase firebase@
+44 silly lockFile 2bddc103-firebase firebase@
+45 error Error: shasum check failed for /var/folders/gb/_x5p8h2s1_7gzt1mvcdvgpvw0000gn/T/npm-8684-CcasWvqZ/1392016029807-0.1931824057828635/tmp.tgz
+45 error Expected: 0937b9760a9bc6859adc04bc56ab9c8d3ca11114
+45 error Actual:   cdd4f2100c1670fc7b8aa934b9b658fb8d71246f
+45 error     at /usr/local/Cellar/node/0.10.22/lib/node_modules/npm/node_modules/sha/index.js:38:8
+45 error     at ReadStream.<anonymous> (/usr/local/Cellar/node/0.10.22/lib/node_modules/npm/node_modules/sha/index.js:85:7)
+45 error     at ReadStream.EventEmitter.emit (events.js:117:20)
+45 error     at _stream_readable.js:920:16
+45 error     at process._tickCallback (node.js:415:13)
+46 error If you need help, you may report this log at:
+46 error     <http://github.com/isaacs/npm/issues>
+46 error or email it to:
+46 error     <npm-@googlegroups.com>
+47 error System Darwin 13.0.0
+48 error command "/usr/local/Cellar/node/0.10.22/bin/node" "/usr/local/bin/npm" "install" "firebase"
+49 error cwd /Users/kwyn/suffixTree
+50 error node -v v0.10.22
+51 error npm -v 1.3.14
+52 verbose exit [ 1, true ]

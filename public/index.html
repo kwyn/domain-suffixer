@@ -1,8 +1,19 @@
-<html>
+<html ng-app>
+  <title> Suffixer </title>
   <head>
-    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src='bower_components/angular/angular.js'> </script>
+    <script src='bower_components/angular-ui/angular-ui.js'> </script>
+    <script src='bower_components/angular-bootstrap/angular-bootstrap.js'> </script>
+    
+    <script src='app.js'> </script>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/boostrap.css" >
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
   <body>
-    <h1>Empty index! woot</h1>
+    <h1 ng-model="urlIdea">{{urlIdea}} a great idea! woot</h1>
+    <label>Website idea:</label>
+      <input type="text" ng-model="urlIdea" placeholder="Idea goes here">
   </body>
 </html>
