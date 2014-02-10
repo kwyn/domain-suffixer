@@ -1,9 +1,8 @@
-<html ng-app>
+<html ng-app="suffixer">
   <title> Suffixer </title>
   <head>
     <script src='bower_components/angular/angular.js'> </script>
-    <script src='bower_components/angular-ui/angular-ui.js'> </script>
-    <script src='bower_components/angular-bootstrap/angular-bootstrap.js'> </script>
+    <script src='bower_components/angular-route/angular-route.js'> </script>
     
     <script src='app.js'> </script>
 
@@ -12,8 +11,10 @@
 
   </head>
   <body>
-    <h1 ng-model="urlIdea">{{urlIdea}} a great idea! woot</h1>
-    <label>Website idea:</label>
-      <input type="text" ng-model="urlIdea" placeholder="Idea goes here">
+    <div ng-controller='frameController'>
+      <h1 ng-model="idea">{{idea}} a great idea! Build it!</h1>
+      <label>Website idea:</label>
+      <input type="text" ng-model="idea" placeholder="Idea goes here">
+</div>
   </body>
 </html>

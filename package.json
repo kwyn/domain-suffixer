@@ -15,6 +15,7 @@
   "dependencies": {
     "express": "~3.4.8",
     "angular": "~1.2.10",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "firebase": "~1.0.5"
   }
 }
