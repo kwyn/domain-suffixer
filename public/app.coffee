@@ -11,10 +11,20 @@ angular.module "suffixer", ['ngRoute']
   .controller 'frameController', ($scope) =>
     $scope.idea = ''
     $scope.results
+    $scope.success = false
+    $scope.fail = false
     $scope.search = (idea)->
-      $scope.results = findIt $scope.idea
+      if (findIt $scope.idea) != undefined
+        $scope.success = true
+        $scope.fail = false
+        $scope.results = findIt $scope.idea
+      else
+        $scope.results = "no results :("
+        $scope.success = false
+        $scope.fail = true
       
 findIt = (word) ->
+  console.log word
   wordArray = word.split ''
   suffixes = wordArray[-4..]
   while suffixes.length > 1
