@@ -44,8 +44,7 @@ removeLetters = (word, letters) ->
           remove copy, index
         else
           remove copy, ++index
-      else
-        remove wordCopy, ++index
+      remove wordCopy, ++index
     else
       return null
   copy = word[..]
