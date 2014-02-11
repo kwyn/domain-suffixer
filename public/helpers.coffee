@@ -39,7 +39,7 @@ removeLetters = (word, letters) ->
       if charidx > -1
         copy = []
         copy = wordCopy[0...charidx].concat wordCopy[charidx+1 ..]
-        results.push copy.join('') 
+        results.push copy.join '' 
         if (copy.indexOf char) > -1 
           remove copy, index
         else
@@ -53,7 +53,28 @@ removeLetters = (word, letters) ->
 
 ###############################################################
 # TODO: Letter Substitution
-
+swapArray = [['k', 'c'], ['k', 'ch']]
+swapLetters = (word, swap)->
+  results = []
+  swapper = (wordCopy, index) ->
+    if index < swap.length
+      char = swap[index][0]
+      charidx = wordCopy.indexOf char
+      if charidx > -1
+        copy = []
+        copy = wordCopy[0...charidx].concat [swap[index][1]] .concat wordCopy[charidx+1 ..]
+        if (results.indexOf copy) == -1
+          results.push copy.join('')
+        if (copy.indexOf char ) > -1
+          swapper copy, index
+        else
+          swapper copy, ++index
+      swapper wordCopy, ++index
+    else
+      return null
+  copy = word[..]
+  swapper copy, 0
+  results
 ###############################################################
 # Find possible domains
 findDomains = (words) -> 
@@ -64,7 +85,7 @@ findDomains = (words) ->
     results = []
     while suffixes.length > 1
       suffix = suffixes.join('')
-      if domainObject[suffix]
+      if domainObject[suffix] && (wordArray[0..-(suffixes.length+1)].length > 1) 
         results.push wordArray[0..-(suffixes.length+1)].join('') + domainObject[suffixes.join('')]
         suffixes.shift()
       else
