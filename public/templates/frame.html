@@ -4,6 +4,6 @@
       <input type="text" ng-model="idea" placeholder="Idea goes here" >
       <button>Search!</button>
     </form>
-    <h2 ng-model="result" ng-show="success">{{results}} a great idea! Build it!</h2>
-    <h2 ng-show="fail">No dice...</h2>
+    <h2 ng-model="result" ng-hide="fail">{{results}}</h2>
+    <h2 ng-show="fail"> No Dice... </h2>
 </div>

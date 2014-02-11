@@ -75,6 +75,7 @@ swapLetters = (word, swap)->
   copy = word[..]
   swapper copy, 0
   results
+
 ###############################################################
 # Find possible domains
 findDomains = (words) -> 
