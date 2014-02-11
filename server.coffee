@@ -4,6 +4,7 @@ app = express()
 
 app.configure =>
   app.use express.static __dirname + '/public'
+  app.use '/whois', helpers.whois
   app.use express.bodyParser()
   app.use express.methodOverride()
   return
