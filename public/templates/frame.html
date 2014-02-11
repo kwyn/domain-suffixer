@@ -6,6 +6,7 @@
     </form>
     <form name="params">
       <button ng-click="removeVowels=!removeVowels; search(idea)" > Remove Vowels? </button>
+      <button ng-click="swapChar=!swapChar; search(idea)"> Swap common sounds? </button>
     </form>
     <h2 ng-model="result" ng-hide="fail">{{results}}</h2>
     <h2 ng-show="fail"> No Dice... </h2>

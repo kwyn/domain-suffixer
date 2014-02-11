@@ -66,9 +66,9 @@ angular.module "suffixer", ['ngRoute']
 
     ###############################################################
     # TODO: Letter Substitution
-    swapArray = [['k', 'c'], ['k', 'ch']]
+    swapArray = [['f', 'ph'], ['j', 'g'], ['j', 'ge'], ['c', 'k'], ['q', 'k'], ['z','s'], ['s', 'z']] 
     swapLetters = (word, swap)->
-      results = [word]
+      results = [word.join('')]
       swapper = (wordCopy, index) ->
         if index < swap.length
           char = swap[index][0]
@@ -87,6 +87,7 @@ angular.module "suffixer", ['ngRoute']
           return null
       copy = word[..]
       swapper copy, 0
+      console.log results
       results
 
     ###############################################################
@@ -115,6 +116,9 @@ angular.module "suffixer", ['ngRoute']
     $scope.search = (idea)-> 
         if $scope.removeVowels
           options = removeLetters (idea.split '') , vowelArray
+          $scope.results = findDomains options
+        else if $scope.swapChar
+          options = swapLetters (idea.split '') , swapArray
           $scope.results = findDomains options
         else
           $scope.results = findDomains [idea]
