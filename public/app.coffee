@@ -111,10 +111,13 @@ angular.module "suffixer", ['ngRoute']
     ###################################################################
     # Calls all the stuff above.
     ###################################################################
-    $scope.search = (idea)->
-        permutations = removeLetters ($scope.idea.split '') , vowelArray
-        console.log permutations
-        $scope.results = findDomains permutations
+    $scope.removeVowels = false;
+    $scope.search = (idea)-> 
+        if $scope.removeVowels
+          options = removeLetters (idea.split '') , vowelArray
+          $scope.results = findDomains options
+        else
+          $scope.results = findDomains [idea]
         if $scope.results.length == 0
           $scope.fail = true
         else 

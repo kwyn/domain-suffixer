@@ -4,6 +4,9 @@
       <input type="text" ng-model="idea" placeholder="Idea goes here" >
       <button>Search!</button>
     </form>
+    <form name="params">
+      <button ng-click="removeVowels=!removeVowels; search(idea)" > Remove Vowels? </button>
+    </form>
     <h2 ng-model="result" ng-hide="fail">{{results}}</h2>
     <h2 ng-show="fail"> No Dice... </h2>
 </div>
