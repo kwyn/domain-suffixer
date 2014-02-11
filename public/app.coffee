@@ -1,5 +1,5 @@
 
-angular.module "suffixer", ['ngRoute']
+angular.module "suffixer", ['ngRoute', 'ui.bootstrap']
   .config ($routeProvider, $locationProvider) => 
     $locationProvider.html5Mode true
     $routeProvider.when '/' , {
@@ -122,6 +122,7 @@ angular.module "suffixer", ['ngRoute']
           $scope.results = findDomains options
         else
           $scope.results = findDomains [idea]
+          console.log $scope.results
         if $scope.results.length == 0
           $scope.fail = true
         else 

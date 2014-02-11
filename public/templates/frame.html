@@ -1,13 +1,19 @@
 <div ng-controller='frameController'>
-    <form name="ideaForm" ng-submit='search(idea)'>
-      <label>Website idea:</label>
-      <input type="text" ng-model="idea" placeholder="Idea goes here" >
-      <button>Search!</button>
+    <div class="jumbotron">
+     <h1 class="bs-header">Suffixer</h1>
+     <form class="form-group" name="ideaForm" ng-submit='search(idea)'>
+      <input class="form-control" type="text" ng-model="idea" placeholder="Your idea goes here" >
     </form>
-    <form name="params">
-      <button ng-click="removeVowels=!removeVowels; search(idea)" > Remove Vowels? </button>
-      <button ng-click="swapChar=!swapChar; search(idea)"> Swap common sounds? </button>
+    <form class="form-inline">
+      <button class="btn btn-success" ng-click="search(idea)"> Search!</button>
+      <button class="btn btn-info" ng-click="removeVowels=!removeVowels; search(idea)" > Remove Vowels? </button>
+      <button class="btn btn-info" ng-click="swapChar=!swapChar; search(idea)"> Swap common sounds? </button>
     </form>
-    <h2 ng-model="result" ng-hide="fail">{{results}}</h2>
-    <h2 ng-show="fail"> No Dice... </h2>
+  </div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="result in results track by $index">
+        <a ng-href="http://www.{{result}}">{{result}}</a>
+      </li>
+    </ul>
+    <div class="alert alert-info" ng-show="fail"> No Dice... </div>
 </div>
