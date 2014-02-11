@@ -1,5 +1,5 @@
 ###############################################################
-# format list
+# format data
 ###############################################################
 
 domain = [".aero",".biz",".cat",".com",".coop",".edu",".gov",".info",".int",".jobs",".mil",".mobi",".museum",
@@ -26,6 +26,7 @@ vowelArray = ['a','e','i','o','u','y']
 ################################################################
 # Helper functions
 ################################################################
+# letter remover
 removeLetters = (word, letters) ->
   #letters = _.intersection word, letters 
   results = []
@@ -51,3 +52,25 @@ removeLetters = (word, letters) ->
   remove copy, 0
   results
 
+###############################################################
+# TODO: Letter Substitution
+
+###############################################################
+# Find possible domains
+findDomains = (words) -> 
+  domains = []
+  findit = (word) ->
+    wordArray = word.split ''
+    suffixes = wordArray[-4..]
+    results = []
+    while suffixes.length > 1
+      suffix = suffixes.join('')
+      if domainObject[suffix]
+        results.push wordArray[0..-(suffixes.length+1)].join('') + domainObject[suffixes.join('')]
+        suffixes.shift()
+      else
+        suffixes.shift()
+    results
+  for word in words
+    domains.push item for item in findit word
+  domains
